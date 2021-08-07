@@ -3,6 +3,11 @@ MIDS-1D Challenge
 
 Working branch for making edits and answering questions for the challenge.
 
+How to use the code
+(1) Download the "mooqita.sh" file, place it in the same directory as the "website" folder which is from the tar ball file.
+(2) The "images" folder should be insider the "website" folder, i.e. no changes are made to the file structure after decompressing the tar ball file.
+(3) Open the terminal and run the "mooqita.sh" file, the index.html file will be created inside the "website" folder, ready for use.
+
 Challenge questions
 
 Question 1
@@ -14,5 +19,12 @@ Restarting the server is not needed, just a refresh in the browser accessing the
 Question 2
 How can you look up the process ID of your server? Document the command line used and the output.
 Answer 2
+(i) Open up another instance of the terminal (since the existing one is running the darkhttpd process)
+(ii) Command in the new terminal: ps -e | grep darkhttpd
+(iii) Output: 47338 pts/1 00:00:00 darkhttpd
+
+Outstanding issues:
+- The image "Síť jehlanu.png" still failed to load even though the encording has been changed to ISO-8859-2 which covers Czech characters
+- Unable to find out how to properly show svg files.
 
 
