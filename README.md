@@ -1,8 +1,6 @@
 # mooqita_challenge
 MIDS-1D Challenge
 
-Working branch for making edits and answering questions for the challenge.
-
 How to use the code
 
 (1) Download the "mooqita.sh" file, place it in the same directory as the "website" folder which is from the tar ball file.
