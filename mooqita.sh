@@ -8,7 +8,7 @@ IndexFile=website/index.html
 # directory, i.e. following the original file structure of the tar ball file.
 ls website/images > filenames.txt
 names=filenames.txt
-recode utf-8..ISO-8859-2 $names
+recode utf-8..ISO-8859-15 $names
 
 # Checks if an index file is already at the location.  If so, renames it to index_backup
 # just in case things go wrong.
@@ -43,7 +43,13 @@ while read filenames; do
 	if [[ $(($count % 3)) -eq 0 ]]; then
 		echo '<tr>' | cat >> $IndexFile
 	fi
-	echo '<td><img src="images/'$filenames'" alt="" border=3 height=100 width=300></th>' | cat >> $IndexFile
+	if [[ $filenames = *.svg ]]; then
+		echo '<td>' | cat >> $IndexFile
+		cat "website/images/$filenames" >> $IndexFile
+		echo '</th>' | cat >> $IndexFile
+	else
+		echo '<td><img src="images/'$filenames'" alt="" border=3 height=100 width=300></th>' | cat >> $IndexFile
+	fi
 	if [[ $(($count % 3)) -eq 2 ]]; then
 		echo '</tr>' | cat >> $IndexFile
 	fi
