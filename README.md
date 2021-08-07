@@ -33,6 +33,8 @@ Answer 2
 
 Outstanding issues:
 - The image "Síť jehlanu.png" still failed to load even though the encording has been changed to ISO-8859-2 which covers Czech characters
-- Unable to find out how to properly show svg files.
+
+Issue with sub-optimal(?) solution:
+- Showing svg files - by reading (using cat) the svg files and then extracting all codes therein and just put it in the table.  The file now shows properly but the size is a bit off.  But still, the table is still in three columns, so it propbably fits the criteria...?
 
 
